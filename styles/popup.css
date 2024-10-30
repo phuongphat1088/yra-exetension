@@ -1,0 +1,102 @@
+* {
+  transition: all 0.25s ease;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 210px;
+  height: 250px;
+  text-align: center;
+}
+
+.meta-ext {
+  margin-bottom: 30px;
+  background: #edf2fb;
+  padding: 10px;
+}
+
+.meta-ext .title-ext {
+  text-align: center;
+  color: #282828;
+  margin: 0;
+}
+
+.meta-ext .title-ext span:nth-child(1) {
+  color: #ff0000;
+}
+
+.meta-ext .author-ext {
+  font-weight: normal;
+  margin: 0;
+  color: #9ca0a6;
+}
+
+.button-toogle {
+  pointer-events: none;
+}
+
+.button-toogle .input {
+  display: none;
+}
+
+.button-toogle .input:checked+.toggle-wrapper {
+  box-shadow: 0 8px 14px 0 rgba(18, 51, 215, 0.12);
+}
+
+.button-toogle .input:checked+.toggle-wrapper>.selector {
+  left: calc(100% - 27px);
+  background-color: #3957ee;
+}
+
+.button-toogle .input:checked~.state:before {
+  content: "ON";
+  color: #3957ee;
+}
+
+.button-toogle .toggle-wrapper {
+  position: relative;
+  width: 70px;
+  height: 30px;
+  background-color: #eaeaea;
+  border-radius: 100px;
+  margin: auto;
+  cursor: pointer;
+  pointer-events: all;
+  box-shadow: 0 8px 14px 0 rgba(215, 60, 18, 0.12);
+}
+
+.button-toogle .toggle-wrapper .selector {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  background-color: #ee5f39;
+  border-radius: 50%;
+}
+
+.button-toogle .state {
+  display: flex;
+  justify-content: center;
+}
+
+.button-toogle .state:before {
+  content: "OFF";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  background-color: #e9ecef;
+  width: 50px;
+  height: 30px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #ee5f39;
+}
+
+.button-toogle {
+  width: 100%;
+}
